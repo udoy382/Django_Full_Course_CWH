@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} Search Results {% endblock title %}
+{% block blogactive %} active {% endblock blogactive%}
+
+{% block body %}
+
+<div class="px-4 py-4 my-3 text-center bg-dark text-white">
+    <!-- <h1 class="display-6 fw-bold my-3">Search Results:</h1> -->
+    {% if allPosts|length < 1 %}
+
+    <p>No Search Results</p>
+    <p>Your search query: <b>{{query}}</b> did not match any documents.</p>
+    <big><p>Suggestions:</p></big>
+    <p>
+        <i>"Make sure that all words are spelled correctly."</i>
+    </p>
+    <p>
+        <i>"Try different keywords."</i>
+    </p>
+    <p>
+        <i>"Try more general keywords."</i>
+    </p>
+    {% endif %}
+
+    {% for post in allPosts %}
+    <div class="col-lg-6 mx-auto">
+      <h1 class="display-6 fw-bold">{{post.title}}</h1>
+      <div>
+        <h1 class="display-6 fw-bold">{{post.datetime}}</h1>
+      </div>
+        <p class="lead mb-4">
+            {{post.content| truncatechars:300}}
+        </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary">Continue Reading</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+{% endblock body %}

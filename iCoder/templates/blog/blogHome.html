@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} blog {% endblock title %}
+{% block blogactive %} active {% endblock blogactive%}
+
+{% block body %}
+
+<!-- <h1 class="display-6 fw-bold">Welcome to iCoder Home</h1> -->
+<div class="px-4 py-4 my-5 text-center bg-light">
+    {% for post in allPosts %}
+    <div class="col-lg-6 mx-auto">
+      <h1 class="display-6 fw-bold"><a class="text-dark" href="/blog/{{post.slug}}">{{post.title}}</a></h1>
+      <div>
+        <h1 class="display-6 fw-bold">{{post.datetime}}</h1>
+      </div>
+        <p class="lead mb-4">
+            {{post.content|safe|truncatechars:300}}
+        </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary">Continue Reading</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+{% endblock body %}
+
+
+

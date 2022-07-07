@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
+
+{% block body %}
+
+  <body>
+    <main>
+      <div class="container py-4">
+        <div class="p-5 mb-4 bg-dark text-white text-center rounded-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Welcome to iCoder Home</h1>
+            <p>Welcome User!<br> We are so excited to have you come our website. This website help to find your favorite blog post</p>
+            <a href="blog" role="button" class="btn btn-primary">Go to Blog</a>
+          </div>
+        </div>
+    
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+              <h2>About Us</h2>
+              <p>If you wnat to know about us so click "About Us" button to know more about us</p>
+              <a href="about" role="button" class="btn btn-primary">About Us</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 p-5 bg-dark text-white border rounded-3">
+              <h2>Contact Us</h2>
+              <p>If you wnat to know contact us so click "Contact Us" button to know Contact us</p>
+              <a href="contact" role="button" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+          <div class="row">
+            <div class="col-12 col-md">
+              <strong class="d-block mb-3 text-muted">© 2021 </strong>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Social Links</h5>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.facebook.com">Facebook</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.google.com">Google</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.instagram.com">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+    </body>
+
+{% endblock body %}
